@@ -5,8 +5,8 @@
 export const categories = [
   {
     id: 'origines',
-    name: 'Par Origine',
-    slug: 'par-origine',
+    name: 'Origines',
+    slug: 'origines',
     description: 'Cafés de spécialité sélectionnés à la source, pays par pays.',
     metaTitle: 'Café par Origine – Éthiopie, Colombie, Brésil | Grains & Origines',
     metaDescription: 'Explorez nos cafés en grain classés par pays d\'origine. Éthiopie, Colombie, Brésil, Guatemala : chaque terroir a son caractère.',
@@ -19,8 +19,8 @@ export const categories = [
   },
   {
     id: 'torrefaction',
-    name: 'Par Torréfaction',
-    slug: 'par-torrefaction',
+    name: 'Torréfaction',
+    slug: 'torrefaction',
     description: 'Choisissez votre profil de torréfaction selon vos goûts.',
     metaTitle: 'Café par Torréfaction – Blonde, Médium, Foncée | Grains & Origines',
     metaDescription: 'Trouvez votre torréfaction idéale : blonde pour l\'acidité et les arômes floraux, médium pour l\'équilibre, foncée pour le corps et l\'amertume.',
@@ -32,8 +32,8 @@ export const categories = [
   },
   {
     id: 'certifications',
-    name: 'Par Certification',
-    slug: 'par-certification',
+    name: 'Bio & Équitable',
+    slug: 'certifications',
     description: 'Cafés certifiés bio, commerce équitable et labels de durabilité.',
     metaTitle: 'Café Bio & Commerce Équitable | Grains & Origines',
     metaDescription: 'Nos cafés certifiés Agriculture Biologique, Fair Trade et Rainforest Alliance. Boire responsable sans sacrifier la qualité.',

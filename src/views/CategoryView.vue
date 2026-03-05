@@ -16,7 +16,7 @@
         <router-link
           v-for="sub in category.subcategories"
           :key="sub.id"
-          :to="`/catalogue/${category.slug}/${sub.slug}`"
+          :to="`/${category.slug}/${sub.slug}`"
           class="subcat-card card"
         >
           <h2>{{ sub.name }}</h2>
@@ -66,11 +66,10 @@ function updateSEO() {
   setMeta({
     title: category.value.metaTitle,
     description: category.value.metaDescription,
-    canonical: `/catalogue/${category.value.slug}`
+    canonical: `/${category.value.slug}`
   })
   setJsonLD(breadcrumbSchema([
     { name: 'Accueil', url: '/' },
-    { name: 'Catalogue', url: '/catalogue' },
     { name: category.value.name }
   ]))
 }

@@ -3,7 +3,7 @@
     <div class="container">
       <Breadcrumb :crumbs="[
         { label: 'Catalogue', to: '/catalogue' },
-        { label: category.name, to: `/catalogue/${category.slug}` },
+        { label: category.name, to: `/${category.slug}` },
         { label: subcategory.name }
       ]" />
 
@@ -22,7 +22,7 @@
 
       <!-- Retour catégorie -->
       <div style="margin:40px 0">
-        <router-link :to="`/catalogue/${category.slug}`" class="btn btn-secondary">
+        <router-link :to="`/${category.slug}`" class="btn btn-secondary">
           ← Toutes les origines {{ category.name.toLowerCase() }}
         </router-link>
       </div>
@@ -34,7 +34,7 @@
           <router-link
             v-for="sub in otherSubs"
             :key="sub.id"
-            :to="`/catalogue/${category.slug}/${sub.slug}`"
+            :to="`/${category.slug}/${sub.slug}`"
             class="related-link"
           >
             {{ sub.name }} →
@@ -70,12 +70,11 @@ function updateSEO() {
   setMeta({
     title: subcategory.value.metaTitle,
     description: subcategory.value.metaDescription,
-    canonical: `/catalogue/${category.value.slug}/${subcategory.value.slug}`
+    canonical: `/${category.value.slug}/${subcategory.value.slug}`
   })
   setJsonLD(breadcrumbSchema([
     { name: 'Accueil', url: '/' },
-    { name: 'Catalogue', url: '/catalogue' },
-    { name: category.value.name, url: `/catalogue/${category.value.slug}` },
+    { name: category.value.name, url: `/${category.value.slug}` },
     { name: subcategory.value.name }
   ]))
 }

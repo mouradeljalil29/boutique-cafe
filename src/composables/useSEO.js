@@ -86,7 +86,7 @@ export function useSEO() {
         availability: product.inStock
           ? 'https://schema.org/InStock'
           : 'https://schema.org/OutOfStock',
-        url: `${BASE_URL}/produits/${product.slug}`,
+        url: `${BASE_URL}/cafe/${product.slug}`,
         seller: { '@type': 'Organization', name: SITE_NAME }
       },
       aggregateRating: {

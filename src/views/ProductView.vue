@@ -155,8 +155,8 @@ const breadcrumbs = computed(() => {
   const sub = getAllSubcategory(product.value.subcategoryId)
   return [
     { label: 'Catalogue', to: '/catalogue' },
-    sub ? { label: sub.category.name, to: `/catalogue/${sub.category.slug}` } : null,
-    sub ? { label: sub.subcategory.name, to: `/catalogue/${sub.category.slug}/${sub.subcategory.slug}` } : null,
+    sub ? { label: sub.category.name, to: `/${sub.category.slug}` } : null,
+    sub ? { label: sub.subcategory.name, to: `/${sub.category.slug}/${sub.subcategory.slug}` } : null,
     { label: product.value.name }
   ].filter(Boolean)
 })
@@ -166,15 +166,15 @@ function updateSEO() {
   setMeta({
     title: product.value.metaTitle,
     description: product.value.metaDescription,
-    canonical: `/produits/${product.value.slug}`,
+    canonical: `/cafe/${product.value.slug}`,
     ogImage: product.value.image
   })
   const sub = getAllSubcategory(product.value.subcategoryId)
   const bc = breadcrumbSchema([
     { name: 'Accueil', url: '/' },
     { name: 'Catalogue', url: '/catalogue' },
-    sub ? { name: sub.category.name, url: `/catalogue/${sub.category.slug}` } : null,
-    sub ? { name: sub.subcategory.name, url: `/catalogue/${sub.category.slug}/${sub.subcategory.slug}` } : null,
+    sub ? { name: sub.category.name, url: `/${sub.category.slug}` } : null,
+    sub ? { name: sub.subcategory.name, url: `/${sub.category.slug}/${sub.subcategory.slug}` } : null,
     { name: product.value.name }
   ].filter(Boolean))
   // Combine product + breadcrumb schemas

@@ -6,33 +6,54 @@
           <span class="logo-icon">☕</span>
           <span class="logo-text">Grains <em>&</em> Origines</span>
         </router-link>
+
         <nav class="main-nav" aria-label="Navigation principale">
           <router-link to="/">Accueil</router-link>
-          <router-link to="/catalogue">Catalogue</router-link>
+
           <div class="nav-dropdown">
-            <span class="nav-trigger">Origines ▾</span>
-            <div class="dropdown-menu">
-              <router-link to="/catalogue/par-origine">Toutes les origines</router-link>
-              <router-link to="/catalogue/par-origine/ethiopie">Éthiopie</router-link>
-              <router-link to="/catalogue/par-origine/colombie">Colombie</router-link>
-              <router-link to="/catalogue/par-origine/bresil">Brésil</router-link>
-              <router-link to="/catalogue/par-origine/guatemala">Guatemala</router-link>
+            <span class="nav-trigger">Nos Cafés ▾</span>
+            <div class="dropdown-menu dropdown-wide">
+              <div class="dropdown-section">
+                <span class="dropdown-label">Nos cafés</span>
+                <router-link to="/cafe/arabica-ethiopie-yirgacheffe-bio-250g">Arabica Yirgacheffe Bio</router-link>
+                <router-link to="/cafe/ethiopie-sidama-natural-250g">Sidama Natural Bio</router-link>
+                <router-link to="/cafe/colombie-huila-single-origin-250g">Colombie Huila Single Origin</router-link>
+                <router-link to="/cafe/colombie-narino-decafeine-250g">Colombie Nariño Décaféiné</router-link>
+                <router-link to="/cafe/espresso-bresil-cerrado-mineiro-500g">Espresso Brésil Cerrado</router-link>
+                <router-link to="/cafe/guatemala-antigua-volcan-250g">Guatemala Antigua Volcan</router-link>
+              </div>
+              <div class="dropdown-section">
+                <span class="dropdown-label">Catégories</span>
+                <router-link to="/catalogue">Tous les cafés</router-link>
+                <router-link to="/origines">Par origine</router-link>
+                <router-link to="/torrefaction">Torréfaction</router-link>
+                <router-link to="/certifications">Bio & Équitable</router-link>
+              </div>
             </div>
           </div>
-          <router-link to="/catalogue/par-torrefaction">Torréfaction</router-link>
-          <router-link to="/catalogue/par-certification">Bio & Équitable</router-link>
+
           <router-link to="/blog">Blog</router-link>
           <router-link to="/a-propos">À propos</router-link>
         </nav>
+
         <button class="nav-toggle" @click="mobileOpen = !mobileOpen" aria-label="Menu">☰</button>
       </div>
+
       <!-- Mobile nav -->
       <nav v-if="mobileOpen" class="mobile-nav">
         <router-link to="/" @click="mobileOpen=false">Accueil</router-link>
-        <router-link to="/catalogue" @click="mobileOpen=false">Catalogue</router-link>
-        <router-link to="/catalogue/par-origine" @click="mobileOpen=false">Par Origine</router-link>
-        <router-link to="/catalogue/par-torrefaction" @click="mobileOpen=false">Par Torréfaction</router-link>
-        <router-link to="/catalogue/par-certification" @click="mobileOpen=false">Bio & Équitable</router-link>
+        <span class="mobile-nav-label">Nos Cafés</span>
+        <router-link to="/cafe/arabica-ethiopie-yirgacheffe-bio-250g" @click="mobileOpen=false" class="mobile-sub">Arabica Yirgacheffe Bio</router-link>
+        <router-link to="/cafe/ethiopie-sidama-natural-250g" @click="mobileOpen=false" class="mobile-sub">Sidama Natural Bio</router-link>
+        <router-link to="/cafe/colombie-huila-single-origin-250g" @click="mobileOpen=false" class="mobile-sub">Colombie Huila</router-link>
+        <router-link to="/cafe/colombie-narino-decafeine-250g" @click="mobileOpen=false" class="mobile-sub">Colombie Décaféiné</router-link>
+        <router-link to="/cafe/espresso-bresil-cerrado-mineiro-500g" @click="mobileOpen=false" class="mobile-sub">Espresso Brésil</router-link>
+        <router-link to="/cafe/guatemala-antigua-volcan-250g" @click="mobileOpen=false" class="mobile-sub">Guatemala Antigua</router-link>
+        <span class="mobile-nav-label">Catégories</span>
+        <router-link to="/catalogue" @click="mobileOpen=false" class="mobile-sub">Tous les cafés</router-link>
+        <router-link to="/origines" @click="mobileOpen=false" class="mobile-sub">Par origine</router-link>
+        <router-link to="/torrefaction" @click="mobileOpen=false" class="mobile-sub">Torréfaction</router-link>
+        <router-link to="/certifications" @click="mobileOpen=false" class="mobile-sub">Bio & Équitable</router-link>
         <router-link to="/blog" @click="mobileOpen=false">Blog</router-link>
         <router-link to="/a-propos" @click="mobileOpen=false">À propos</router-link>
       </nav>
@@ -50,22 +71,24 @@
         </div>
         <div class="footer-links">
           <h4>Origines</h4>
-          <router-link to="/catalogue/par-origine/ethiopie">Éthiopie</router-link>
-          <router-link to="/catalogue/par-origine/colombie">Colombie</router-link>
-          <router-link to="/catalogue/par-origine/bresil">Brésil</router-link>
-          <router-link to="/catalogue/par-origine/guatemala">Guatemala</router-link>
+          <router-link to="/origines/ethiopie">Éthiopie</router-link>
+          <router-link to="/origines/colombie">Colombie</router-link>
+          <router-link to="/origines/bresil">Brésil</router-link>
+          <router-link to="/origines/guatemala">Guatemala</router-link>
         </div>
         <div class="footer-links">
           <h4>Torréfaction</h4>
-          <router-link to="/catalogue/par-torrefaction/blonde">Blonde</router-link>
-          <router-link to="/catalogue/par-torrefaction/medium">Médium</router-link>
-          <router-link to="/catalogue/par-torrefaction/foncee">Foncée</router-link>
+          <router-link to="/torrefaction">Guide torréfaction</router-link>
+          <router-link to="/torrefaction/blonde">Blonde</router-link>
+          <router-link to="/torrefaction/medium">Médium</router-link>
+          <router-link to="/torrefaction/foncee">Foncée</router-link>
         </div>
         <div class="footer-links">
           <h4>À propos</h4>
           <router-link to="/a-propos">Notre histoire</router-link>
           <router-link to="/blog">Blog café</router-link>
-          <router-link to="/catalogue">Tous les produits</router-link>
+          <router-link to="/certifications">Bio & Équitable</router-link>
+          <router-link to="/catalogue">Tous les cafés</router-link>
         </div>
       </div>
       <div class="footer-bottom">
@@ -88,18 +111,21 @@ const mobileOpen = ref(false)
   box-shadow: 0 2px 12px rgba(0,0,0,0.3);
 }
 .header-inner {
-  display: flex; align-items: center; gap: 32px;
+  display: flex; align-items: center;
   padding-top: 14px; padding-bottom: 14px;
 }
 .logo {
   display: flex; align-items: center; gap: 10px;
   font-family: var(--font-serif); font-size: 1.3rem;
   color: var(--cream-200); white-space: nowrap;
+  margin-right: auto;
 }
 .logo em { color: var(--brown-300); font-style: normal; }
 .logo-icon { font-size: 1.5rem; }
+
 .main-nav {
-  display: flex; align-items: center; gap: 4px; margin-left: auto;
+  display: flex; align-items: center; gap: 4px;
+  position: absolute; left: 50%; transform: translateX(-50%);
 }
 .main-nav a, .nav-trigger {
   color: var(--cream-300); padding: 8px 14px; border-radius: 6px;
@@ -111,13 +137,18 @@ const mobileOpen = ref(false)
 /* Dropdown */
 .nav-dropdown { position: relative; }
 .dropdown-menu {
-  display: none; position: absolute; top: 100%; left: 0;
+  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
   background: var(--brown-800); border-radius: var(--radius);
   padding: 8px; min-width: 200px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.3);
 }
 .nav-dropdown:hover .dropdown-menu { display: flex; flex-direction: column; }
 .dropdown-menu a { display: block; padding: 8px 12px; border-radius: 4px; font-size: 0.88rem; }
+
+/* Wide dropdown (Nos Cafés) */
+.dropdown-wide { min-width: 360px; flex-direction: row !important; gap: 4px; left: 0; transform: none; }
+.dropdown-section { display: flex; flex-direction: column; flex: 1; }
+.dropdown-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brown-400); padding: 6px 12px 4px; }
 
 .nav-toggle { display: none; background: none; border: none; color: white; font-size: 1.4rem; cursor: pointer; margin-left: auto; }
 
@@ -126,6 +157,8 @@ const mobileOpen = ref(false)
   background: var(--brown-800); padding: 8px 20px 16px;
 }
 .mobile-nav a { color: var(--cream-200); padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.mobile-nav-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brown-400); padding: 12px 0 4px; }
+.mobile-nav a.mobile-sub { padding-left: 14px; font-size: 0.88rem; opacity: 0.85; }
 
 /* Footer */
 .site-footer { background: var(--brown-900); color: var(--cream-300); margin-top: 80px; }

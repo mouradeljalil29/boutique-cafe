@@ -10,6 +10,7 @@ export const articles = [
     image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=900&q=80',
     metaTitle: "Qu'est-ce qu'un café de spécialité ? Guide complet | Grains & Origines",
     metaDescription: "Comprendre le café de spécialité : définition, score Q-Arabica, traçabilité et différence avec le café commercial. Tout ce que vous devez savoir.",
+    relatedProductSlugs: ['arabica-ethiopie-yirgacheffe-bio-250g', 'colombie-huila-single-origin-250g'],
     content: [
       "Le terme « café de spécialité » désigne les cafés ayant obtenu un score supérieur à 80 points sur 100 selon les critères de la Specialty Coffee Association (SCA). Ce score est attribué par des évaluateurs certifiés Q-Grader qui notent l'arôme, la saveur, l'acidité, le corps, l'équilibre et l'absence de défauts.",
       "Contrairement au café de commodité — acheté et vendu au prix du marché sans considération de qualité — le café de spécialité est tracé de la ferme à la tasse. On connaît le producteur, la région, l'altitude, la variété de café, la méthode de traitement post-récolte et la date de torréfaction.",
@@ -29,6 +30,7 @@ export const articles = [
     image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=900&q=80',
     metaTitle: 'Torréfaction Blonde, Médium ou Foncée : Guide Complet | Grains & Origines',
     metaDescription: "Comprendre les différences entre torréfaction blonde, médium et foncée. Quel impact sur les arômes, l'acidité et le choix de la méthode d'extraction ?",
+    relatedProductSlugs: ['arabica-ethiopie-yirgacheffe-bio-250g', 'espresso-bresil-cerrado-mineiro-500g', 'colombie-huila-single-origin-250g'],
     content: [
       "La torréfaction est l'étape qui transforme le café vert — sans saveur — en grain aromatique prêt à être moulu et extrait. La durée et la température de torréfaction modifient profondément la composition chimique du grain et, par conséquent, son profil gustatif.",
       "La torréfaction blonde (light roast) s'arrête avant le premier crack, entre 180 et 205°C. Elle préserve les acides organiques et les composés aromatiques volatils du terroir d'origine. Le résultat : une acidité vive, des notes florales, fruitées et herbacées. C'est la torréfaction privilégiée pour les méthodes douces comme le V60, la Chemex ou l'Aeropress à basse température.",
@@ -48,6 +50,7 @@ export const articles = [
     image: 'https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=900&q=80',
     metaTitle: "L'Éthiopie, Berceau du Café : Histoire et Régions | Grains & Origines",
     metaDescription: "L'Éthiopie est le berceau historique du café Arabica. Yirgacheffe, Sidama, Harrar : découvrez les régions et leur caractère aromatique unique.",
+    relatedProductSlugs: ['arabica-ethiopie-yirgacheffe-bio-250g', 'ethiopie-sidama-natural-250g'],
     content: [
       "Selon la légende, c'est en Éthiopie, dans la région de Kaffa, qu'un berger nommé Kaldi aurait découvert les propriétés stimulantes du café au IXe siècle, après avoir observé ses chèvres gambader toute la nuit après avoir mangé des baies rouges. Légende ou pas, l'Éthiopie reste le seul pays au monde où le café Arabica pousse à l'état sauvage dans les forêts de montagne.",
       "Le caféier Coffea arabica est endémique des hauts plateaux éthiopiens. Cette biodiversité génétique unique — on y recense des centaines de variétés « heirloom » (patrimoine) — est précieuse pour l'avenir de la filière mondiale, notamment face aux enjeux climatiques.",
@@ -67,6 +70,7 @@ export const articles = [
     image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=80',
     metaTitle: 'Préparer un Café en Grain à la Maison : Guide Pratique | Grains & Origines',
     metaDescription: "Guide complet pour préparer un café en grain à la maison : choix du moulin, réglage de la mouture, température de l'eau, méthodes filtre et espresso.",
+    relatedProductSlugs: ['colombie-huila-single-origin-250g', 'guatemala-antigua-volcan-250g', 'colombie-narino-decafeine-250g'],
     content: [
       "La première règle est de moudre juste avant l'extraction. Le café perd rapidement ses arômes une fois moulu : après 15 minutes, les composés volatils s'évaporent. Un moulin à meules (plat ou conique) donne une mouture homogène, essentielle pour une extraction régulière. Évitez les moulins à lames qui chauffent le grain et produisent des particules irrégulières.",
       "La mouture doit être adaptée à la méthode. Pour un filtre V60 ou Chemex, une mouture médium-fine est idéale. Pour une cafetière à piston (French Press), on préfère une mouture grossière pour éviter que les particules passent à travers le filtre. Pour l'espresso, la mouture doit être fine, ajustée au gramme près.",

@@ -1,6 +1,6 @@
 <template>
   <router-link
-    :to="`/produits/${product.slug}`"
+    :to="`/cafe/${product.slug}`"
     class="product-card card"
     :class="{ 'out-of-stock': !product.inStock }"
   >

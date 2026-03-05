@@ -27,7 +27,7 @@
         <router-link
           v-for="cat in categories"
           :key="cat.id"
-          :to="`/catalogue/${cat.slug}`"
+          :to="`/${cat.slug}`"
           class="cat-nav-link"
         >
           {{ cat.name }} ({{ getCountByCategory(cat.id) }})
@@ -43,7 +43,7 @@
       <div class="seo-text-block">
         <h2>Notre sélection de cafés en grain</h2>
         <p>Grains & Origines propose une sélection rigoureuse de <strong>cafés de spécialité en grain</strong> issus des meilleures régions productrices du monde. Chaque café est sélectionné selon le score Q-Arabica (minimum 80/100), garantissant une qualité supérieure au café de commodité.</p>
-        <p>Notre catalogue est organisé par <router-link to="/catalogue/par-origine">pays d'origine</router-link>, par <router-link to="/catalogue/par-torrefaction">profil de torréfaction</router-link> et par <router-link to="/catalogue/par-certification">certification</router-link> (Bio, Commerce Équitable).</p>
+        <p>Notre catalogue est organisé par <router-link to="/origines">pays d'origine</router-link>, par <router-link to="/torrefaction">profil de torréfaction</router-link> et par <router-link to="/certifications">certification</router-link> (Bio, Commerce Équitable).</p>
       </div>
     </div>
   </div>

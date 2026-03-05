@@ -11,7 +11,7 @@
         </p>
         <div class="hero-cta">
           <router-link to="/catalogue" class="btn btn-primary">Découvrir le catalogue</router-link>
-          <router-link to="/catalogue/par-origine/ethiopie" class="btn btn-secondary">Nos cafés Éthiopie</router-link>
+          <router-link to="/origines/ethiopie" class="btn btn-secondary">Nos cafés Éthiopie</router-link>
         </div>
       </div>
       <div class="hero-image">
@@ -33,7 +33,7 @@
           <router-link
             v-for="cat in categories"
             :key="cat.id"
-            :to="`/catalogue/${cat.slug}`"
+            :to="`/${cat.slug}`"
             class="cat-card card"
           >
             <div class="cat-icon">{{ catIcons[cat.id] }}</div>

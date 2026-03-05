@@ -13,19 +13,32 @@ const routes = [
     component: () => import('../views/CatalogueView.vue')
   },
   {
-    // Page catégorie : /catalogue/par-origine
-    path: '/catalogue/:categorySlug',
+    // Page éditoriale Torréfaction (guide, sans produits)
+    path: '/torrefaction',
+    name: 'Torrefaction',
+    component: () => import('../views/TorrefactionView.vue')
+  },
+  {
+    // Page éditoriale Bio & Équitable (guide, sans produits)
+    path: '/certifications',
+    name: 'Certifications',
+    component: () => import('../views/CertificationsView.vue')
+  },
+  {
+    // Page catégorie Origines : /origines
+    path: '/origines',
     name: 'Category',
     component: () => import('../views/CategoryView.vue')
   },
   {
-    // Page sous-catégorie : /catalogue/par-origine/ethiopie
-    path: '/catalogue/:categorySlug/:subcategorySlug',
+    // Pages sous-catégorie : /origines/ethiopie  /torrefaction/blonde  etc.
+    path: '/:categorySlug(origines|torrefaction|certifications)/:subcategorySlug',
     name: 'Subcategory',
     component: () => import('../views/SubcategoryView.vue')
   },
   {
-    path: '/produits/:productSlug',
+    // Fiche produit : /cafe/arabica-ethiopie-yirgacheffe-bio-250g
+    path: '/cafe/:productSlug',
     name: 'Product',
     component: () => import('../views/ProductView.vue')
   },
