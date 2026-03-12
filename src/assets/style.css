@@ -1,0 +1,131 @@
+/* style.css – styles globaux (chargés via nuxt.config.ts → css: ['~/assets/style.css']) */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --brown-900: #1a0e00;
+  --brown-800: #3d1f00;
+  --brown-700: #6b3a1f;
+  --brown-500: #a0522d;
+  --brown-300: #c8956a;
+  --cream-100: #fdf6ee;
+  --cream-200: #f5e6d3;
+  --cream-300: #e8d0b5;
+  --green-700: #2d5a27;
+  --green-500: #4a7c59;
+  --green-200: #c8e6c0;
+  --red-500: #c0392b;
+  --text-dark: #1a0e00;
+  --text-mid: #5a3e2b;
+  --text-light: #8c6b50;
+  --border: #e0c9b0;
+  --shadow: rgba(61, 31, 0, 0.1);
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+  --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --radius: 8px;
+  --radius-lg: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--cream-100);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+/* ── Layout ── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.page { min-height: 100vh; }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px; border-radius: var(--radius);
+  font-size: 0.95rem; font-weight: 600; cursor: pointer;
+  border: none; transition: all 0.2s;
+}
+.btn-primary {
+  background: var(--brown-700); color: white;
+}
+.btn-primary:hover { background: var(--brown-800); transform: translateY(-1px); }
+.btn-secondary {
+  background: transparent; border: 2px solid var(--brown-700); color: var(--brown-700);
+}
+.btn-secondary:hover { background: var(--brown-700); color: white; }
+.btn-sm { padding: 8px 16px; font-size: 0.85rem; }
+
+/* ── Cards ── */
+.card {
+  background: white; border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 12px var(--shadow);
+  overflow: hidden; transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px var(--shadow); }
+
+/* ── Badges ── */
+.badge {
+  display: inline-block; padding: 3px 10px; border-radius: 20px;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em;
+}
+.badge-green { background: var(--green-200); color: var(--green-700); }
+.badge-brown { background: var(--cream-200); color: var(--brown-700); }
+.badge-seo { background: #e8f4ff; color: #1565c0; font-family: monospace; }
+
+/* ── Stars ── */
+.stars { color: #f4a01c; font-size: 1.1rem; }
+
+/* ── SEO Panel ── */
+.seo-panel {
+  background: #f0f7ff; border: 2px solid #90caf9;
+  border-radius: var(--radius); padding: 16px; margin: 16px 0;
+  font-family: monospace; font-size: 0.82rem;
+}
+.seo-panel h4 { color: #1565c0; margin-bottom: 8px; font-size: 0.85rem; }
+.seo-check { display: flex; align-items: flex-start; gap: 8px; margin: 4px 0; }
+.seo-check.ok { color: #2e7d32; }
+.seo-check.warn { color: #e65100; }
+.seo-check.bad { color: #c62828; }
+
+/* ── Breadcrumb ── */
+.breadcrumb {
+  display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+  font-size: 0.85rem; color: var(--text-light); padding: 12px 0;
+}
+.breadcrumb a:hover { color: var(--brown-700); text-decoration: underline; }
+.breadcrumb span { color: var(--text-light); }
+
+/* ── Grid ── */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ── Section headers ── */
+.section-title {
+  font-family: var(--font-serif); font-size: 2rem;
+  color: var(--brown-800); margin-bottom: 8px;
+}
+.section-subtitle { color: var(--text-mid); font-size: 1rem; margin-bottom: 32px; }
+
+/* ── Out of stock ── */
+.out-of-stock { opacity: 0.6; position: relative; }
+.out-of-stock::after {
+  content: 'Rupture de stock';
+  position: absolute; top: 12px; right: 12px;
+  background: var(--red-500); color: white;
+  padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .section-title { font-size: 1.5rem; }
+  .products-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .products-grid { grid-template-columns: 1fr; }
+}

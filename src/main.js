@@ -1,6 +1,9 @@
-import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
+import { routes, scrollBehavior } from './router'
 import './style.css'
+import { ViteSSG } from 'vite-ssg'
 
-createApp(App).use(router).mount('#app')
+export const createApp = ViteSSG(
+  App,
+  { routes, routerOptions: { scrollBehavior } }
+)
