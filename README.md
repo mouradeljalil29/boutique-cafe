@@ -10,17 +10,16 @@ The following diagram illustrates the application's routing and page hierarchy.
 ```mermaid
 graph TD
     Home[HomeView /] --> Cafes[CatalogueView /cafes]
-    Home --> Blog[BlogView /blog]
+    Home --> Blog[BlogView /articles]
     Home --> About[AboutView /a-propos]
-    
+
     Cafes --> Category[CategoryView /origines]
-    Cafes --> Product[ProductView /cafe/:slug]
-    
+    Cafes --> Product[ProductView /cafes/:slug]
+
     Category --> Subcategory[SubcategoryView /:cat/:sub]
     Subcategory --> Product
-    
-    Blog --> Article[BlogArticleView /blog/:slug]
-    
+
+    Blog --> Article[BlogArticleView /articles/:slug]    
     Nav[Global Navigation] --> Torrefaction[TorrefactionView /torrefaction]
     Nav --> Certifications[CertificationsView /certifications]
 ```

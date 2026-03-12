@@ -15,12 +15,12 @@
             <div class="dropdown-menu dropdown-wide">
               <div class="dropdown-section">
                 <span class="dropdown-label">Nos cafés</span>
-                <router-link to="/cafe/arabica-ethiopie-yirgacheffe-bio-250g">Arabica Yirgacheffe Bio</router-link>
-                <router-link to="/cafe/ethiopie-sidama-natural-250g">Sidama Natural Bio</router-link>
-                <router-link to="/cafe/colombie-huila-single-origin-250g">Colombie Huila Single Origin</router-link>
-                <router-link to="/cafe/colombie-narino-decafeine-250g">Colombie Nariño Décaféiné</router-link>
-                <router-link to="/cafe/espresso-bresil-cerrado-mineiro-500g">Espresso Brésil Cerrado</router-link>
-                <router-link to="/cafe/guatemala-antigua-volcan-250g">Guatemala Antigua Volcan</router-link>
+                <router-link to="/cafes/arabica-ethiopie-yirgacheffe-bio-250g">Arabica Yirgacheffe Bio</router-link>
+                <router-link to="/cafes/ethiopie-sidama-natural-250g">Sidama Natural Bio</router-link>
+                <router-link to="/cafes/colombie-huila-single-origin-250g">Colombie Huila Single Origin</router-link>
+                <router-link to="/cafes/colombie-narino-decafeine-250g">Colombie Nariño Décaféiné</router-link>
+                <router-link to="/cafes/espresso-bresil-cerrado-mineiro-500g">Espresso Brésil Cerrado</router-link>
+                <router-link to="/cafes/guatemala-antigua-volcan-250g">Guatemala Antigua Volcan</router-link>
               </div>
               <div class="dropdown-section">
                 <span class="dropdown-label">Catégories</span>
@@ -32,7 +32,7 @@
             </div>
           </div>
 
-          <router-link to="/blog">Blog</router-link>
+          <router-link to="/articles">Blog</router-link>
           <router-link to="/a-propos">À propos</router-link>
         </nav>
 
@@ -43,18 +43,18 @@
       <nav v-if="mobileOpen" class="mobile-nav">
         <router-link to="/" @click="mobileOpen=false">Accueil</router-link>
         <span class="mobile-nav-label">Nos Cafés</span>
-        <router-link to="/cafe/arabica-ethiopie-yirgacheffe-bio-250g" @click="mobileOpen=false" class="mobile-sub">Arabica Yirgacheffe Bio</router-link>
-        <router-link to="/cafe/ethiopie-sidama-natural-250g" @click="mobileOpen=false" class="mobile-sub">Sidama Natural Bio</router-link>
-        <router-link to="/cafe/colombie-huila-single-origin-250g" @click="mobileOpen=false" class="mobile-sub">Colombie Huila</router-link>
-        <router-link to="/cafe/colombie-narino-decafeine-250g" @click="mobileOpen=false" class="mobile-sub">Colombie Décaféiné</router-link>
-        <router-link to="/cafe/espresso-bresil-cerrado-mineiro-500g" @click="mobileOpen=false" class="mobile-sub">Espresso Brésil</router-link>
-        <router-link to="/cafe/guatemala-antigua-volcan-250g" @click="mobileOpen=false" class="mobile-sub">Guatemala Antigua</router-link>
+        <router-link to="/cafes/arabica-ethiopie-yirgacheffe-bio-250g" @click="mobileOpen=false" class="mobile-sub">Arabica Yirgacheffe Bio</router-link>
+        <router-link to="/cafes/ethiopie-sidama-natural-250g" @click="mobileOpen=false" class="mobile-sub">Sidama Natural Bio</router-link>
+        <router-link to="/cafes/colombie-huila-single-origin-250g" @click="mobileOpen=false" class="mobile-sub">Colombie Huila</router-link>
+        <router-link to="/cafes/colombie-narino-decafeine-250g" @click="mobileOpen=false" class="mobile-sub">Colombie Décaféiné</router-link>
+        <router-link to="/cafes/espresso-bresil-cerrado-mineiro-500g" @click="mobileOpen=false" class="mobile-sub">Espresso Brésil</router-link>
+        <router-link to="/cafes/guatemala-antigua-volcan-250g" @click="mobileOpen=false" class="mobile-sub">Guatemala Antigua</router-link>
         <span class="mobile-nav-label">Catégories</span>
         <router-link to="/cafes" @click="mobileOpen=false" class="mobile-sub">Tous les cafés</router-link>
         <router-link to="/origines" @click="mobileOpen=false" class="mobile-sub">Par origine</router-link>
         <router-link to="/torrefaction" @click="mobileOpen=false" class="mobile-sub">Torréfaction</router-link>
         <router-link to="/certifications" @click="mobileOpen=false" class="mobile-sub">Bio & Équitable</router-link>
-        <router-link to="/blog" @click="mobileOpen=false">Blog</router-link>
+        <router-link to="/articles" @click="mobileOpen=false">Blog</router-link>
         <router-link to="/a-propos" @click="mobileOpen=false">À propos</router-link>
       </nav>
     </header>
@@ -86,7 +86,7 @@
         <div class="footer-links">
           <h4>À propos</h4>
           <router-link to="/a-propos">Notre histoire</router-link>
-          <router-link to="/blog">Blog café</router-link>
+          <router-link to="/articles">Blog café</router-link>
           <router-link to="/certifications">Bio & Équitable</router-link>
           <router-link to="/cafes">Tous les cafés</router-link>
         </div>

@@ -8,7 +8,7 @@
 
       <div class="articles-grid">
         <article v-for="article in articles" :key="article.id" class="article-card card">
-          <router-link :to="`/blog/${article.slug}`" class="card-image-link">
+          <router-link :to="`/articles/${article.slug}`" class="card-image-link">
             <img :src="article.image" :alt="article.title" width="400" height="240" loading="lazy" />
           </router-link>
           <div class="card-body">
@@ -17,10 +17,10 @@
               <span class="read-time">{{ article.readTime }} min de lecture</span>
             </div>
             <h2>
-              <router-link :to="`/blog/${article.slug}`">{{ article.title }}</router-link>
+              <router-link :to="`/articles/${article.slug}`">{{ article.title }}</router-link>
             </h2>
             <p class="excerpt">{{ article.excerpt }}</p>
-            <router-link :to="`/blog/${article.slug}`" class="read-more">Lire l'article →</router-link>
+            <router-link :to="`/articles/${article.slug}`" class="read-more">Lire l'article →</router-link>
           </div>
         </article>
       </div>
@@ -39,7 +39,7 @@ onMounted(() => {
   setMeta({
     title: 'Blog – Guides & Conseils Café de Spécialité | Grains & Origines',
     description: 'Guides, histoires d\'origines et conseils de préparation pour mieux comprendre et apprécier le café de spécialité en grain.',
-    canonical: '/blog'
+    canonical: '/articles'
   })
 })
 </script>

@@ -166,7 +166,7 @@ function updateSEO() {
   setMeta({
     title: product.value.metaTitle,
     description: product.value.metaDescription,
-    canonical: `/cafe/${product.value.slug}`,
+    canonical: `/cafes/${product.value.slug}`,
     ogImage: product.value.image
   })
   const sub = getAllSubcategory(product.value.subcategoryId)

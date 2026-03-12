@@ -88,59 +88,59 @@
 
   <!-- Fiches produit -->
   <url>
-    <loc>https://grains-et-origines.fr/cafe/arabica-ethiopie-yirgacheffe-bio-250g</loc>
+    <loc>https://grains-et-origines.fr/cafes/arabica-ethiopie-yirgacheffe-bio-250g</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://grains-et-origines.fr/cafe/colombie-huila-single-origin-250g</loc>
+    <loc>https://grains-et-origines.fr/cafes/colombie-huila-single-origin-250g</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://grains-et-origines.fr/cafe/espresso-bresil-cerrado-mineiro-500g</loc>
+    <loc>https://grains-et-origines.fr/cafes/espresso-bresil-cerrado-mineiro-500g</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://grains-et-origines.fr/cafe/guatemala-antigua-volcan-250g</loc>
+    <loc>https://grains-et-origines.fr/cafes/guatemala-antigua-volcan-250g</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://grains-et-origines.fr/cafe/ethiopie-sidama-natural-250g</loc>
+    <loc>https://grains-et-origines.fr/cafes/ethiopie-sidama-natural-250g</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grains-et-origines.fr/cafe/colombie-narino-decafeine-250g</loc>
+    <loc>https://grains-et-origines.fr/cafes/colombie-narino-decafeine-250g</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Blog -->
   <url>
-    <loc>https://grains-et-origines.fr/blog</loc>
+    <loc>https://grains-et-origines.fr/articles</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://grains-et-origines.fr/blog/quest-ce-que-le-cafe-de-specialite</loc>
+    <loc>https://grains-et-origines.fr/articles/quest-ce-que-le-cafe-de-specialite</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://grains-et-origines.fr/blog/torrefaction-blonde-medium-foncee-quelle-difference</loc>
+    <loc>https://grains-et-origines.fr/articles/torrefaction-blonde-medium-foncee-quelle-difference</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://grains-et-origines.fr/blog/ethiopie-berceau-du-cafe-origines-histoire</loc>
+    <loc>https://grains-et-origines.fr/articles/ethiopie-berceau-du-cafe-origines-histoire</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://grains-et-origines.fr/blog/comment-preparer-cafe-en-grain-maison</loc>
+    <loc>https://grains-et-origines.fr/articles/comment-preparer-cafe-en-grain-maison</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

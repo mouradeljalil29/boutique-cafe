@@ -1,7 +1,7 @@
 <template>
   <div class="page" v-if="article">
     <div class="container">
-      <Breadcrumb :crumbs="[{ label: 'Blog', to: '/blog' }, { label: article.title }]" />
+      <Breadcrumb :crumbs="[{ label: 'Blog', to: '/articles' }, { label: article.title }]" />
 
       <article class="article">
         <header class="article-header">
@@ -28,7 +28,7 @@
       </article>
 
       <div class="article-footer">
-        <router-link to="/blog" class="btn btn-secondary">← Retour au blog</router-link>
+        <router-link to="/articles" class="btn btn-secondary">← Retour au blog</router-link>
         <router-link to="/cafes" class="btn btn-primary">Découvrir nos cafés</router-link>
       </div>
 
@@ -39,7 +39,7 @@
           <router-link
             v-for="p in relatedProducts"
             :key="p.id"
-            :to="`/cafe/${p.slug}`"
+            :to="`/cafes/${p.slug}`"
             class="mini-product-card card"
           >
             <img :src="p.image" :alt="`${p.name} – café en grain ${p.origin}`" width="260" height="160" loading="lazy" />
@@ -58,7 +58,7 @@
           <router-link
             v-for="rel in related"
             :key="rel.id"
-            :to="`/blog/${rel.slug}`"
+            :to="`/articles/${rel.slug}`"
             class="related-card card"
           >
             <img :src="rel.image" :alt="rel.title" width="300" height="160" loading="lazy" />
@@ -73,7 +73,7 @@
   </div>
 
   <div v-else class="container">
-    <p style="margin:60px 0">Article introuvable. <router-link to="/blog">Retour au blog</router-link></p>
+    <p style="margin:60px 0">Article introuvable. <router-link to="/articles">Retour au blog</router-link></p>
   </div>
 </template>
 
@@ -104,7 +104,7 @@ function updateSEO() {
   setMeta({
     title: article.value.metaTitle,
     description: article.value.metaDescription,
-    canonical: `/blog/${article.value.slug}`,
+    canonical: `/articles/${article.value.slug}`,
     ogImage: article.value.image
   })
 }

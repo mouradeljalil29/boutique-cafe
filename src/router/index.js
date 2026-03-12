@@ -37,18 +37,18 @@ const routes = [
     component: () => import('../views/SubcategoryView.vue')
   },
   {
-    // Fiche produit : /cafe/arabica-ethiopie-yirgacheffe-bio-250g
-    path: '/cafe/:productSlug',
+    // Fiche produit : /cafes/arabica-ethiopie-yirgacheffe-bio-250g
+    path: '/cafes/:productSlug',
     name: 'Product',
     component: () => import('../views/ProductView.vue')
   },
   {
-    path: '/blog',
+    path: '/articles',
     name: 'Blog',
     component: () => import('../views/BlogView.vue')
   },
   {
-    path: '/blog/:articleSlug',
+    path: '/articles/:articleSlug',
     name: 'BlogArticle',
     component: () => import('../views/BlogArticleView.vue')
   },
