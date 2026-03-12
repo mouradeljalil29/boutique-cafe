@@ -2,7 +2,7 @@
   <div class="page" v-if="category">
     <div class="container">
       <Breadcrumb :crumbs="[
-        { label: 'Catalogue', to: '/catalogue' },
+        { label: 'Cafés', to: '/cafes' },
         { label: category.name }
       ]" />
 
@@ -39,7 +39,7 @@
   </div>
 
   <div v-else class="container">
-    <p style="margin:40px 0">Catégorie introuvable. <router-link to="/catalogue">Retour au catalogue</router-link></p>
+    <p style="margin:40px 0">Catégorie introuvable. <router-link to="/cafes">Retour aux cafés</router-link></p>
   </div>
 </template>
 

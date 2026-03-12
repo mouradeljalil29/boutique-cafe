@@ -24,7 +24,7 @@
               </div>
               <div class="dropdown-section">
                 <span class="dropdown-label">Catégories</span>
-                <router-link to="/catalogue">Tous les cafés</router-link>
+                <router-link to="/cafes">Tous les cafés</router-link>
                 <router-link to="/origines">Par origine</router-link>
                 <router-link to="/torrefaction">Torréfaction</router-link>
                 <router-link to="/certifications">Bio & Équitable</router-link>
@@ -50,7 +50,7 @@
         <router-link to="/cafe/espresso-bresil-cerrado-mineiro-500g" @click="mobileOpen=false" class="mobile-sub">Espresso Brésil</router-link>
         <router-link to="/cafe/guatemala-antigua-volcan-250g" @click="mobileOpen=false" class="mobile-sub">Guatemala Antigua</router-link>
         <span class="mobile-nav-label">Catégories</span>
-        <router-link to="/catalogue" @click="mobileOpen=false" class="mobile-sub">Tous les cafés</router-link>
+        <router-link to="/cafes" @click="mobileOpen=false" class="mobile-sub">Tous les cafés</router-link>
         <router-link to="/origines" @click="mobileOpen=false" class="mobile-sub">Par origine</router-link>
         <router-link to="/torrefaction" @click="mobileOpen=false" class="mobile-sub">Torréfaction</router-link>
         <router-link to="/certifications" @click="mobileOpen=false" class="mobile-sub">Bio & Équitable</router-link>
@@ -88,7 +88,7 @@
           <router-link to="/a-propos">Notre histoire</router-link>
           <router-link to="/blog">Blog café</router-link>
           <router-link to="/certifications">Bio & Équitable</router-link>
-          <router-link to="/catalogue">Tous les cafés</router-link>
+          <router-link to="/cafes">Tous les cafés</router-link>
         </div>
       </div>
       <div class="footer-bottom">

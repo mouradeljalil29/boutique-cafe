@@ -112,7 +112,7 @@
   </div>
 
   <div v-else class="container">
-    <p style="margin:60px 0">Produit introuvable. <router-link to="/catalogue">Retour au catalogue</router-link></p>
+    <p style="margin:60px 0">Produit introuvable. <router-link to="/cafes">Retour aux cafés</router-link></p>
   </div>
 </template>
 
@@ -154,7 +154,7 @@ const breadcrumbs = computed(() => {
   if (!product.value) return []
   const sub = getAllSubcategory(product.value.subcategoryId)
   return [
-    { label: 'Catalogue', to: '/catalogue' },
+    { label: 'Cafés', to: '/cafes' },
     sub ? { label: sub.category.name, to: `/${sub.category.slug}` } : null,
     sub ? { label: sub.subcategory.name, to: `/${sub.category.slug}/${sub.subcategory.slug}` } : null,
     { label: product.value.name }
@@ -172,7 +172,7 @@ function updateSEO() {
   const sub = getAllSubcategory(product.value.subcategoryId)
   const bc = breadcrumbSchema([
     { name: 'Accueil', url: '/' },
-    { name: 'Catalogue', url: '/catalogue' },
+    { name: 'Cafés', url: '/cafes' },
     sub ? { name: sub.category.name, url: `/${sub.category.slug}` } : null,
     sub ? { name: sub.subcategory.name, url: `/${sub.category.slug}/${sub.subcategory.slug}` } : null,
     { name: product.value.name }

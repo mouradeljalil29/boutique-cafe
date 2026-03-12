@@ -8,8 +8,8 @@ const routes = [
   },
   {
     // Catalogue général
-    path: '/catalogue',
-    name: 'Catalogue',
+    path: '/cafes',
+    name: 'Cafes',
     component: () => import('../views/CatalogueView.vue')
   },
   {

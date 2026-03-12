@@ -83,7 +83,7 @@
           <router-link to="/torrefaction/blonde" class="btn btn-secondary">Torréfaction Blonde</router-link>
           <router-link to="/torrefaction/medium" class="btn btn-secondary">Torréfaction Médium</router-link>
           <router-link to="/torrefaction/foncee" class="btn btn-secondary">Torréfaction Foncée</router-link>
-          <router-link to="/catalogue" class="btn btn-primary">Tous nos cafés</router-link>
+          <router-link to="/cafes" class="btn btn-primary">Tous nos cafés</router-link>
         </div>
       </div>
     </div>

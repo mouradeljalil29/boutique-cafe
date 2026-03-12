@@ -7,7 +7,7 @@
         <p>Cette page n'existe pas ou a été déplacée.</p>
         <div style="display:flex;gap:12px;justify-content:center;margin-top:24px">
           <router-link to="/" class="btn btn-primary">Retour à l'accueil</router-link>
-          <router-link to="/catalogue" class="btn btn-secondary">Voir le catalogue</router-link>
+          <router-link to="/cafes" class="btn btn-secondary">Tous nos cafés</router-link>
         </div>
       </div>
     </div>

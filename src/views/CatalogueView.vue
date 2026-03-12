@@ -1,11 +1,11 @@
 <template>
   <div class="page">
     <div class="container">
-      <Breadcrumb :crumbs="[{ label: 'Catalogue' }]" />
+      <Breadcrumb :crumbs="[{ label: 'Cafés' }]" />
 
-      <div class="catalogue-header">
+      <div class="cafes-header">
         <!-- H1 optimisé avec mot-clé -->
-        <h1 class="section-title">Catalogue – Cafés de Spécialité en Grain</h1>
+        <h1 class="section-title">Nos Cafés de Spécialité en Grain</h1>
         <p class="section-subtitle">{{ products.length }} références sélectionnées à la source</p>
       </div>
 
@@ -43,7 +43,7 @@
       <div class="seo-text-block">
         <h2>Notre sélection de cafés en grain</h2>
         <p>Grains & Origines propose une sélection rigoureuse de <strong>cafés de spécialité en grain</strong> issus des meilleures régions productrices du monde. Chaque café est sélectionné selon le score Q-Arabica (minimum 80/100), garantissant une qualité supérieure au café de commodité.</p>
-        <p>Notre catalogue est organisé par <router-link to="/origines">pays d'origine</router-link>, par <router-link to="/torrefaction">profil de torréfaction</router-link> et par <router-link to="/certifications">certification</router-link> (Bio, Commerce Équitable).</p>
+        <p>Notre sélection est organisée par <router-link to="/origines">pays d'origine</router-link>, par <router-link to="/torrefaction">profil de torréfaction</router-link> et par <router-link to="/certifications">certification</router-link> (Bio, Commerce Équitable).</p>
       </div>
     </div>
   </div>
@@ -59,8 +59,8 @@ import { useSEO } from '@/composables/useSEO.js'
 const activeFilter = ref('all')
 const { setMeta } = useSEO()
 
-const pageTitle = 'Catalogue Cafés de Spécialité en Grain | Grains & Origines'
-const pageDesc = 'Parcourez notre catalogue de cafés de spécialité en grain. Éthiopie, Colombie, Brésil, Guatemala. Torréfaction artisanale. Certifiés Bio et Équitable. Commande en ligne.'
+const pageTitle = 'Cafés de Spécialité en Grain | Grains & Origines'
+const pageDesc = 'Parcourez notre sélection de cafés de spécialité en grain. Éthiopie, Colombie, Brésil, Guatemala. Torréfaction artisanale. Certifiés Bio et Équitable. Commande en ligne.'
 
 const filters = [
   { label: 'Tous', value: 'all' },
@@ -85,12 +85,12 @@ function getCountByCategory(catId) {
 }
 
 onMounted(() => {
-  setMeta({ title: pageTitle, description: pageDesc, canonical: '/catalogue' })
+  setMeta({ title: pageTitle, description: pageDesc, canonical: '/cafes' })
 })
 </script>
 
 <style scoped>
-.catalogue-header { margin: 24px 0 32px; }
+.cafes-header { margin: 24px 0 32px; }
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
 .cat-nav { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; padding: 16px; background: var(--cream-200); border-radius: var(--radius); }
 .cat-nav-link { color: var(--brown-700); font-weight: 600; font-size: 0.9rem; padding: 6px 12px; border-radius: var(--radius); transition: all 0.2s; }

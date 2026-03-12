@@ -29,7 +29,7 @@
 
       <div class="article-footer">
         <router-link to="/blog" class="btn btn-secondary">← Retour au blog</router-link>
-        <router-link to="/catalogue" class="btn btn-primary">Découvrir nos cafés</router-link>
+        <router-link to="/cafes" class="btn btn-primary">Découvrir nos cafés</router-link>
       </div>
 
       <!-- Produits liés à l'article : maillage interne blog → produits -->

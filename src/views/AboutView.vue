@@ -89,7 +89,7 @@
       <div class="container">
         <h2>Découvrez notre sélection</h2>
         <p>Six origines soigneusement sélectionnées, toutes disponibles en grain entier.</p>
-        <router-link to="/catalogue" class="btn btn-primary">Voir le catalogue</router-link>
+        <router-link to="/cafes" class="btn btn-primary">Voir nos cafés</router-link>
       </div>
     </section>
   </div>

@@ -10,7 +10,7 @@
           vous transportent d'Éthiopie au Guatemala. Livraison France entière.
         </p>
         <div class="hero-cta">
-          <router-link to="/catalogue" class="btn btn-primary">Découvrir le catalogue</router-link>
+          <router-link to="/cafes" class="btn btn-primary">Découvrir nos cafés</router-link>
           <router-link to="/origines/ethiopie" class="btn btn-secondary">Nos cafés Éthiopie</router-link>
         </div>
       </div>
@@ -58,7 +58,7 @@
           <ProductCard v-for="p in featured" :key="p.id" :product="p" />
         </div>
         <div style="text-align:center;margin-top:40px">
-          <router-link to="/catalogue" class="btn btn-primary">Voir tous les produits</router-link>
+          <router-link to="/cafes" class="btn btn-primary">Voir tous les cafés</router-link>
         </div>
       </div>
     </section>

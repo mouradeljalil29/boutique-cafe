@@ -63,7 +63,7 @@
           </div>
           <div>
             <h3>Traçabilité totale</h3>
-            <p>Chaque café de notre catalogue est accompagné du nom du producteur ou de la coopérative, de la région et du millésime. La traçabilité va plus loin que le label : vous savez exactement qui a cultivé votre café et dans quelles conditions.</p>
+            <p>Chaque café de notre sélection est accompagné du nom du producteur ou de la coopérative, de la région et du millésime. La traçabilité va plus loin que le label : vous savez exactement qui a cultivé votre café et dans quelles conditions.</p>
           </div>
           <div>
             <h3>Agroforesterie</h3>
@@ -77,7 +77,7 @@
         <div class="cta-links">
           <router-link to="/certifications/bio" class="btn btn-secondary">Cafés Bio certifiés AB</router-link>
           <router-link to="/certifications/equitable" class="btn btn-secondary">Cafés Commerce Équitable</router-link>
-          <router-link to="/catalogue" class="btn btn-primary">Tous nos cafés</router-link>
+          <router-link to="/cafes" class="btn btn-primary">Tous nos cafés</router-link>
         </div>
       </div>
     </div>

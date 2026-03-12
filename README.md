@@ -1,101 +1,115 @@
-# ☕ Grains & Origines – Projet SEO E-commerce
+# Project Documentation
 
-Projet scolaire de démonstration SEO e-commerce, réalisé en **Vue.js 3** avec **Vue Router 4**.
+Grains & Origines is a specialized e-commerce platform for high-end coffee beans, built as a SEO-focused demonstration project. It features a robust architecture optimized for search engines, including dynamic metadata management, structured data (JSON-LD), and a clean, semantic URL structure.
 
-## 🎯 Objectif
+## Architecture & Flows
 
-Démontrer les bonnes pratiques SEO sur une boutique e-commerce fictive vendant des cafés de spécialité en grain.
+### Navigation Structure
+The following diagram illustrates the application's routing and page hierarchy.
 
-## 🚀 Lancer le projet
-
-```bash
-npm install
-npm run dev
+```mermaid
+graph TD
+    Home[HomeView /] --> Cafes[CatalogueView /cafes]
+    Home --> Blog[BlogView /blog]
+    Home --> About[AboutView /a-propos]
+    
+    Cafes --> Category[CategoryView /origines]
+    Cafes --> Product[ProductView /cafe/:slug]
+    
+    Category --> Subcategory[SubcategoryView /:cat/:sub]
+    Subcategory --> Product
+    
+    Blog --> Article[BlogArticleView /blog/:slug]
+    
+    Nav[Global Navigation] --> Torrefaction[TorrefactionView /torrefaction]
+    Nav --> Certifications[CertificationsView /certifications]
 ```
 
-## 📁 Structure des pages
+### Component Hierarchy
+The application follows a modular Vue 3 structure centered around a main layout in `App.vue`.
 
-| URL | Description | SEO |
-|-----|-------------|-----|
-| `/` | Page d'accueil | H1, JSON-LD Organization, OG tags |
-| `/catalogue` | Tous les produits | Filtres, maillage interne |
-| `/catalogue/:category` | Page catégorie | H1, breadcrumb, JSON-LD BreadcrumbList |
-| `/catalogue/:category/:subcategory` | Sous-catégorie | Maillage interne, canonical |
-| `/produits/:slug` | Fiche produit | JSON-LD Product, rating, alt images |
-| `/seo-demo` | Démonstration avant/après | Noindex (page pédagogique) |
+```mermaid
+graph BT
+    subgraph Views
+        HV[HomeView]
+        PV[ProductView]
+        BV[BlogView]
+    end
 
-## 🔍 Fonctionnalités SEO implémentées
+    subgraph Components
+        BC[Breadcrumb]
+        PC[ProductCard]
+    end
 
-### Technique
-- ✅ URLs lisibles avec slugs (`/produits/arabica-ethiopie-yirgacheffe-bio-250g`)
-- ✅ `<title>` et `<meta description>` dynamiques par page (composable `useSEO`)
-- ✅ Balise `<link rel="canonical">` sur toutes les pages
-- ✅ `<meta name="robots">` avec `noindex` sur les pages pédagogiques
-- ✅ Open Graph (og:title, og:description, og:image)
-- ✅ Twitter Card
+    subgraph Core
+        APP[App.vue]
+        R[Vue Router]
+        SEO[useSEO Composable]
+    end
 
-### Sémantique HTML
-- ✅ Hiérarchie H1 > H2 > H3 respectée (une seule H1 par page)
-- ✅ Attributs `alt` descriptifs sur toutes les images
-- ✅ Attributs `width` et `height` pour réduire le CLS
-- ✅ `loading="lazy"` sur les images secondaires
-- ✅ Navigation sémantique (`<nav aria-label="...">`)
-
-### Données structurées (Schema.org / JSON-LD)
-- ✅ `Product` (name, price, availability, image, sku)
-- ✅ `AggregateRating` (étoiles, nombre d'avis)
-- ✅ `Offer` (prix, disponibilité, vendeur)
-- ✅ `BreadcrumbList` (fil d'ariane dans Google)
-- ✅ `Organization` (page d'accueil)
-
-### Contenu
-- ✅ Descriptions produit 200+ mots avec keywords naturels
-- ✅ Maillage interne (catégorie → sous-catégorie → produit → produits similaires)
-- ✅ Breadcrumb sur toutes les pages de profondeur 2+
-- ✅ Textes SEO sur les pages catalogue
-
-## 🗂️ Architecture
-
-```
-src/
-├── composables/
-│   └── useSEO.js          # Gestion centralisée title, meta, JSON-LD
-├── data/
-│   └── products.js        # Données produits, catégories, sous-catégories
-├── router/
-│   └── index.js           # Routes SEO-friendly
-├── components/
-│   ├── ProductCard.vue    # Carte produit réutilisable
-│   ├── Breadcrumb.vue     # Fil d'ariane
-│   └── SeoPanel.vue       # Panneau d'analyse SEO pédagogique
-└── views/
-    ├── HomeView.vue        # Accueil
-    ├── CatalogueView.vue   # Catalogue complet
-    ├── CategoryView.vue    # Page catégorie
-    ├── SubcategoryView.vue # Page sous-catégorie
-    ├── ProductView.vue     # Fiche produit
-    ├── SeoDemoView.vue     # Démonstration avant/après
-    └── NotFoundView.vue    # 404
+    HV --> APP
+    PV --> APP
+    BV --> APP
+    BC --> PV
+    PC --> HV
+    PC --> Cafes
+    SEO -.-> Views
 ```
 
-## 📊 Produits de démonstration
+## Installation
 
-| Produit | Origine | Torréfaction | Certifications |
-|---------|---------|-------------|----------------|
-| Arabica Éthiopie Yirgacheffe Bio | Éthiopie | Blonde | Bio, Équitable |
-| Colombie Huila Single Origin | Colombie | Médium | Équitable |
-| Espresso Brésil Cerrado | Brésil | Foncée | – |
-| Guatemala Antigua Volcan Bio | Guatemala | Médium | Bio |
-| Éthiopie Sidama Natural | Éthiopie | Blonde | Bio |
-| Colombie Nariño Décaféiné | Colombie | Médium | Bio, Équitable |
+### Prerequisites
+- **Node.js**: Version 18.0 or higher
+- **npm**: Version 9.0 or higher
 
-## 🛠️ Technologies
+### Setup
+1. Clone the repository to your local machine.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-- **Vue.js 3** (Composition API, `<script setup>`)
-- **Vue Router 4** (createWebHistory)
-- **Vite** (bundler)
-- CSS custom (sans framework, variables CSS)
+### Development Scripts
+- **Start development server**:
+  ```bash
+  npm run dev
+  ```
+- **Build for production**:
+  ```bash
+  npm run build
+  ```
+- **Preview production build**:
+  ```bash
+  npm run preview
+  ```
 
----
+## Module Explanations
 
-Projet réalisé dans le cadre d'un cours d'e-commerce · Démonstration SEO
+### `src/components/`
+Contains reusable UI components designed for consistency and SEO (semantic HTML).
+- **`ProductCard.vue`**: Displays coffee details in grids with proper `h3` hierarchy and optimized image tags.
+- **`Breadcrumb.vue`**: Provides secondary navigation and generates BreadcrumbList structured data for SERPs.
+
+### `src/views/`
+Core page components mapped to specific routes.
+- **`HomeView.vue`**: The landing page focusing on brand identity and featured products.
+- **`ProductView.vue`**: Detailed product specification pages with deep-link capabilities.
+- **`CategoryView.vue` & `SubcategoryView.vue`**: Dynamic listing pages filtered by origin, roast level, or certifications.
+- **`BlogView.vue` & `BlogArticleView.vue`**: Content-marketing modules to drive organic traffic through long-form articles.
+
+### `src/composables/useSEO.js`
+The heart of the project's SEO strategy. This utility provides:
+- **Dynamic Meta Tags**: Updates `document.title` and `<meta name="description">` on every route change.
+- **Open Graph & Twitter Cards**: Ensures rich social sharing previews.
+- **JSON-LD Generation**: Automatically injects `Product`, `BreadcrumbList`, and `Organization` schemas into the document head to enhance search result snippets.
+
+### `src/router/`
+Configures Vue Router with a focus on human-readable, keyword-rich URLs.
+- Uses `createWebHistory` for clean URLs (no hashes).
+- Implements lazy-loading for all views to improve initial PageSpeed scores.
+- Defines specific patterns for categories and subcategories to maintain a strict URL hierarchy.
+
+### `src/data/`
+Acts as a local "headless" data source.
+- **`products.js`**: Central repository for coffee varieties, pricing, and technical specs.
+- **`blog.js`**: Contains structured article content, authors, and publication dates.

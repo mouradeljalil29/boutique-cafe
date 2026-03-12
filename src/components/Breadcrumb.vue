@@ -12,6 +12,6 @@
 <script setup>
 defineProps({
   crumbs: { type: Array, default: () => [] }
-  // Exemple : [{ label: 'Catalogue', to: '/catalogue' }, { label: 'Éthiopie' }]
+  // Exemple : [{ label: 'Cafés', to: '/cafes' }, { label: 'Éthiopie' }]
 })
 </script>
